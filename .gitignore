@@ -1,0 +1,8 @@
+__pycache__/
+.pytest_cache/
+.venv/
+data/
+vuln/static/uploads/*
+!vuln/static/uploads/.gitkeep
+vuln/static/pwned*
+vuln/pwned*

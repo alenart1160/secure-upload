@@ -1,0 +1,27 @@
+services:
+  vuln:                       # wersja podatna  -> http://localhost:5001
+    build: .
+    working_dir: /app/vuln
+    command: gunicorn -b 0.0.0.0:5000 app:app
+    ports: ["5001:5000"]
+
+  fixed:                      # wersja poprawiona -> http://localhost:5002
+    build: .
+    working_dir: /app/fixed
+    command: gunicorn -b 0.0.0.0:5000 app:app
+    environment:
+      UPLOAD_DIR: /data
+    volumes: ["fixed_data:/data"]
+    ports: ["5002:5000"]
+
+  tests:                      # uruchamiane ręcznie, patrz README
+    build: .
+    profiles: ["test"]
+    working_dir: /app
+    depends_on: [vuln, fixed]
+    environment:
+      VULN_URL: http://vuln:5000
+      FIXED_URL: http://fixed:5000
+
+volumes:
+  fixed_data:
