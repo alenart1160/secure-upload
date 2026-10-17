@@ -1,4 +1,4 @@
-# P6 – Secure Upload (wersja minimalna)
+# P6 – Secure Upload
 
 Dwie małe aplikacje Flask: **`vuln`** (celowo podatna) i **`fixed`** (poprawiona), plus 7 testów.
 Te same testy: na `vuln` **czerwone** (dowód BEFORE), na `fixed` **zielone** (test ponowny AFTER).
