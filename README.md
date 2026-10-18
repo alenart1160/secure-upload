@@ -3,7 +3,7 @@
 Dwie małe aplikacje Flask: **`vuln`** (celowo podatna) i **`fixed`** (poprawiona), plus 7 testów pytest.
 Te same testy na `vuln` nie przechodzą (6 failed), a na `fixed` przechodzą (7 passed).
 
-> ⚠️ `vuln` jest celowo niebezpieczna. Uruchamiaj ją tylko lokalnie (localhost / Docker). Testy używają wyłącznie sztucznych danych.
+>  `vuln` jest celowo niebezpieczna. Uruchamiaj ją tylko lokalnie (localhost / Docker). Testy używają wyłącznie sztucznych danych.
 
 ## Uruchomienie
 
